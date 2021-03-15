@@ -7,7 +7,9 @@ use Math::FractionalPart;
 
 # Basic tests for the fractionl functions
 
+my $debug = 0;
 my %n; # see values in BEGIN block at the end
+# the three functions to be tested:
 my @f = &frac, &afrac, &ofrac;
 
 #plan 159;
@@ -19,25 +21,84 @@ for @f {
     is $_(NaN), NaN, "is f(NaN) = NaN for function $fn";
 }
 
-for %n.kv -> $tgt is copy, $exp {
-    is $tgt.frac, $exp, "$tgt.frac";
-    is frac($tgt), $exp, "frac($tgt)";
-    is (frac $tgt), $exp, "(frac $tgt)";
-    isa-ok $tgt.frac, Real, "$tgt.frac is type Real";
-    isa-ok frac($tgt), Real, "frac($tgt) is type Real";
-    isa-ok (frac $tgt), Real, "(frac $tgt) is type Real";
+
+for %n.keys.sort -> $tgt is copy {
+    for @f {
+        my $fn = $_.name;
+        my $exp;
+        when $fn eq 'frac' {
+            note "DEBUG: fn = '$fn'" if $debug;
+            $exp = ($tgt - $tgt.floor);
+            is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
+            is ($tgt).$_, $exp, "is ($tgt).$fn = $exp for function $fn";
+            isa-ok $_($tgt), Real, "isa-ok f($tgt), Real for function $fn";
+            isa-ok ($tgt).$_, Real, "isa-ok ($tgt).$fn, Real for function $fn";
+            =begin comment
+            # TODO: get this syntax correct:
+            is ($_ $tgt), $exp, "is ($fn $tgt) = $exp for function $fn";
+            isa-ok ($_ $tgt), Real, "($fn $tgt), Real for function $fn";
+            =end comment
+        }
+        when $fn eq 'afrac' {
+            note "DEBUG: fn = '$fn'" if $debug;
+            $exp = ($tgt.abs - $tgt.abs.floor);
+            is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
+            is ($tgt).$_, $exp, "is ($tgt).$fn = $exp for function $fn";
+            isa-ok $_($tgt), Real, "isa-ok f($tgt), Real for function $fn";
+            isa-ok ($tgt).$_, Real, "isa-ok ($tgt).$fn, Real for function $fn";
+        }
+        when $fn eq 'ofrac' {
+            note "DEBUG: fn = '$fn'" if $debug;
+            $exp = ($tgt - $tgt.abs.floor * $tgt.sign);
+            is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
+            is ($tgt).$_, $exp, "is ($tgt).$fn = $exp for function $fn";
+            isa-ok $_($tgt), Real, "isa-ok f($tgt), Real for function $fn";
+            isa-ok ($tgt).$_, Real, "isa-ok ($tgt).$fn, Real for function $fn";
+        }
+    }
+
+    # check the positive values
 
     $tgt .= abs;
-    is $tgt.frac, $exp, "$tgt.frac";
-    is frac($tgt), $exp, "frac($tgt)";
-    is (frac $tgt), $exp, "(frac $tgt)";
-    isa-ok $tgt.frac, Real, "$tgt.frac is type Real";
-    isa-ok frac($tgt), Real, "frac($tgt) is type Real";
-    isa-ok (frac $tgt), Real, "(frac $tgt) is type Real";
+
+    for @f {
+        my $fn = $_.name;
+        my $exp;
+        when $fn eq 'frac' {
+            note "DEBUG: fn = '$fn'" if $debug;
+            $exp = ($tgt - $tgt.floor);
+            is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
+            is ($tgt).$_, $exp, "is ($tgt).$fn = $exp for function $fn";
+            isa-ok $_($tgt), Real, "isa-ok f($tgt), Real for function $fn";
+            isa-ok ($tgt).$_, Real, "isa-ok ($tgt).$fn, Real for function $fn";
+            =begin comment
+            # TODO: get this syntax correct:
+            is ($_ $tgt), $exp, "is ($fn $tgt) = $exp for function $fn";
+            isa-ok ($_ $tgt), Real, "($fn $tgt), Real for function $fn";
+            =end comment
+        }
+        when $fn eq 'afrac' {
+            note "DEBUG: fn = '$fn'" if $debug;
+            $exp = ($tgt.abs - $tgt.abs.floor);
+            is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
+            is ($tgt).$_, $exp, "is ($tgt).$fn = $exp for function $fn";
+            isa-ok $_($tgt), Real, "isa-ok f($tgt), Real for function $fn";
+            isa-ok ($tgt).$_, Real, "isa-ok ($tgt).$fn, Real for function $fn";
+        }
+        when $fn eq 'ofrac' {
+            note "DEBUG: fn = '$fn'" if $debug;
+            $exp = ($tgt - $tgt.abs.floor * $tgt.sign);
+            is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
+            is ($tgt).$_, $exp, "is ($tgt).$fn = $exp for function $fn";
+            isa-ok $_($tgt), Real, "isa-ok f($tgt), Real for function $fn";
+            isa-ok ($tgt).$_, Real, "isa-ok ($tgt).$fn, Real for function $fn";
+        }
+    }
+
+    #last;
 }
 
-
-
+done-testing;
 
 BEGIN {
     %n =
