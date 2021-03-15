@@ -3,7 +3,7 @@
 NAME
 ====
 
-Math::FractionalPart provides several routines to operate with the fractional parts of a number:
+Math::FractionalPart provides several routines to operate with the fractional parts of a number
 
 SYNOPSIS
 ========
