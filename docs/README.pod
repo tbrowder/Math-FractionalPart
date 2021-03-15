@@ -2,7 +2,8 @@
 
 =head1 NAME
 
-Math::FractionalPart - blah blah blah
+Math::FractionalPart provides several routines to operate with the
+fractional parts of a number:
 
 =head1 SYNOPSIS
 
@@ -14,9 +15,6 @@ say (frac -3.2);  # Output <<-0.2>>
 
 =head1 DESCRIPTION
 
-Math::FractionalPart provides several routines to operate with the
-fractional parts of a number:
-
 There are three different algebraic functions that operate on numbers
 and return their fractional parts. They all return the same result
 when operating on non-negative numbers, but all three return different
@@ -26,6 +24,19 @@ references:
 =item1 1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
 =item1 2. Wolfram article on L<Fractional Part|https://mathworld.wolfram.com/FractionalPart.html>
 =item1 3. I<Celestial Calculations: A Gentle Introduction to Computational Astronomy>, J. L. Lawrence, 2018, MIT Press.
+
+The following table shows the routines that have been implemented in
+this module.
+
+=begin table
+Name  | Raku formul                 | Example           | Notes
+---   | ---                         | ---               | ---
+frac  | x - floor(x)                | frac(-1.3): 0.7   | 1
+afrac | abs(x) - floor(abs(x))      | afrac(-1.3): 0.3  | 2
+ofrac | x - floor(abs(x)) * sign(x) | ofrac(-1.3): -0.3 | 3
+=end table
+
+(NOTE: The table below will show incorrectly until C<mi6> has the capability to implement more Unicode symbols.)
 
 =begin table
 Name  | Formula                                     | Example           | Notes
