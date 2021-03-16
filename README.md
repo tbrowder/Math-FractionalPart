@@ -3,7 +3,7 @@
 NAME
 ====
 
-Math::FractionalPart provides several routines to operate with the fractional parts of a number
+Math::FractionalPart provides several routines to operate with the fractional parts of a number. All routines also operate on complex numbers.
 
 SYNOPSIS
 ========
@@ -19,11 +19,13 @@ DESCRIPTION
 
 There are three different algebraic functions that operate on numbers and return their fractional parts. They all return the same result when operating on non-negative numbers, but all three return different results when operating on negative numbers. See the following references:
 
-  * 1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
+### 1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
 
-  * 2. Wolfram article on [Fractional Part](https://mathworld.wolfram.com/FractionalPart.html)
+### 2. Wolfram article on [Fractional Part](https://mathworld.wolfram.com/FractionalPart.html)
 
-  * 3. *Celestial Calculations: A Gentle Introduction to Computational Astronomy*, J. L. Lawrence, 2018, MIT Press.
+### 3. *Celestial Calculations: A Gentle Introduction to Computational Astronomy*, J. L. Lawrence, 2018, MIT Press.
+
+Note that Ref. 3 shows *frac* operating in the *complex plane* as `frac(x + i y) = frac(x) + i frac(y)`.
 
 The following table shows the routines that have been implemented in this module.
 
