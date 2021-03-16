@@ -17,7 +17,7 @@ say (frac -3.2);  # Output <<-0.2>>
 DESCRIPTION
 ===========
 
-There are three different algebraic functions that operate on numbers and return their fractional parts. They all return the same result when operating on non-negative numbers, but all three return different results when operating on negative numbers. See the [REFERENCES/#REFERENCES](REFERENCES/#REFERENCES) for more details.
+There are three different algebraic functions that operate on numbers and return their fractional parts. They all return the same result when operating on non-negative numbers, but all three return different results when operating on negative numbers. See the [References](#References) for more details.
 
 Note that Ref. 3 shows *frac* operating in the *complex plane* as `frac(x + i y) = frac(x) + i frac(y)`.
 
@@ -32,7 +32,7 @@ The following table shows the routines that have been implemented in this module
 </tbody>
 </table>
 
-(NOTE: The table below will show incorrectly until `mi6` has the capability to implement more Unicode symbols.)
+(NOTE: The table below will show incorrectly until `Pod::To::Markdown` has the capability to implement more Unicode symbols.)
 
 <table class="pod-table">
 <thead><tr>
@@ -52,7 +52,7 @@ Notes
 
 3. See Ref. 1, *frac* version 3 (an *odd function*); Ref. 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
 
-REFERENCES
+References
 ==========
 
 1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
