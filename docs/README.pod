@@ -21,9 +21,9 @@ when operating on non-negative numbers, but all three return different
 results when operating on negative numbers. See the following
 references:
 
-=head3 1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
-=head3 2. Wolfram article on L<Fractional Part|https://mathworld.wolfram.com/FractionalPart.html>
-=head3 3. I<Celestial Calculations: A Gentle Introduction to Computational Astronomy>, J. L. Lawrence, 2018, MIT Press.
+=head6 1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
+=head6 2. Wolfram article on L<Fractional Part|https://mathworld.wolfram.com/FractionalPart.html>
+=head6 3. I<Celestial Calculations: A Gentle Introduction to Computational Astronomy>, J. L. Lawrence, 2018, MIT Press.
 
 Note that Ref. 3 shows I<frac> operating in the I<complex plane> as C<frac(x + i y) = frac(x) + i frac(y)>.
 
@@ -50,9 +50,9 @@ ofrac | x - E<0x230a>\|x\|E<0x230b>E<0x22c5>sign(x) | ofrac(-1.3): -0.3 | 3
 =end table
 
 Notes
-=item1 1. See Ref 1, *frac* version 1 (per Graham, Knuth, et alii, 1992).
-=item1 2. See Ref 1, *frac* version 2 (per Dainith, 2004); Ref 3, p. 7. Consider mnemonic 'a' for 'absolute value' or 'astronomical'.
-=item1 3. See Ref 1, *frac* version 3 (an *odd function*); Ref 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
+=head6 1. See Ref 1, *frac* version 1 (per Graham, Knuth, et alii, 1992).
+=head6 2. See Ref 1, *frac* version 2 (per Dainith, 2004); Ref 3, p. 7. Consider mnemonic 'a' for 'absolute value' or 'astronomical'.
+=head6 3. See Ref 1, *frac* version 3 (an *odd function*); Ref 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
 
 =head1 AUTHOR
 
