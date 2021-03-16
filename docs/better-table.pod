@@ -1,0 +1,13 @@
+=begin pod
+
+(NOTE: The table below will show incorrectly until C<Pod::To::Markdown> has the capability to implement more Unicode symbols.)
+
+=begin table
+Name  | Formula                                     | Example           | Notes
+---   | ---                                         | ---               | ---
+frac  | x - E<0x230a;>xE<0x230b>                     | frac(-1.3): 0.7   | 1
+afrac | \|x\| - E<0x230a>\|x\|E<0x230b>             | afrac(-1.3): 0.3  | 2
+ofrac | x - E<0x230a>\|x\|E<0x230b>E<0x22c5>sign(x) | ofrac(-1.3): -0.3 | 3
+=end table
+
+=end pod
