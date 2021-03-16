@@ -17,9 +17,12 @@ say (frac -3.2);  # Output <<-0.2>>
 DESCRIPTION
 ===========
 
-There are three different algebraic functions that operate on numbers and return their fractional parts. They all return the same result when operating on non-negative numbers, but all three return different results when operating on negative numbers. See the following references:
+There are three different algebraic functions that operate on numbers and return their fractional parts. They all return the same result when operating on non-negative numbers, but all three return different results when operating on negative numbers. See the [REFERENCES](REFERENCES) for more details.
 
-  * Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
+REFERENCES
+==========
+
+###### 1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
 
 ###### 2. Wolfram article on [Fractional Part](https://mathworld.wolfram.com/FractionalPart.html)
 
@@ -49,7 +52,7 @@ The following table shows the routines that have been implemented in this module
 </tbody>
 </table>
 
-Notes
+##### Notes
 
 ###### 1. See Ref 1, *frac* version 1 (per Graham, Knuth, et alii, 1992).
 
