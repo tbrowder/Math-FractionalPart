@@ -21,7 +21,9 @@ when operating on non-negative numbers, but all three return different
 results when operating on negative numbers. See the following
 references:
 
-=head6 1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
+=for item :numbered
+Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
+
 =head6 2. Wolfram article on L<Fractional Part|https://mathworld.wolfram.com/FractionalPart.html>
 =head6 3. I<Celestial Calculations: A Gentle Introduction to Computational Astronomy>, J. L. Lawrence, 2018, MIT Press.
 
