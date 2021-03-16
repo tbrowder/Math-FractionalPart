@@ -18,7 +18,7 @@ say (frac -3.2);  # Output <<-0.2>>
 There are three different algebraic functions that operate on numbers
 and return their fractional parts. They all return the same result
 when operating on non-negative numbers, but all three return different
-results when operating on negative numbers. See the L<REFERENCES/#REFERENCES> for
+results when operating on negative numbers. See the L<References|#References> for
 more details.
 
 Note that Ref. 3 shows I<frac> operating in the I<complex plane> as C<frac(x + i y) = frac(x) + i frac(y)>.
@@ -34,7 +34,7 @@ afrac | abs(x) - floor(abs(x))      | afrac(-1.3): 0.3  | 2
 ofrac | x - floor(abs(x)) * sign(x) | ofrac(-1.3): -0.3 | 3
 =end table
 
-(NOTE: The table below will show incorrectly until C<mi6> has the capability to implement more Unicode symbols.)
+(NOTE: The table below will show incorrectly until C<Pod::To::Markdown> has the capability to implement more Unicode symbols.)
 
 =begin table
 Name  | Formula                                     | Example           | Notes
@@ -52,7 +52,7 @@ ofrac | x - E<0x230a>\|x\|E<0x230b>E<0x22c5>sign(x) | ofrac(-1.3): -0.3 | 3
 
 3. See Ref. 1, *frac* version 3 (an *odd function*); Ref. 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
 
-=head1 REFERENCES
+=head1 References
 
 1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
 
