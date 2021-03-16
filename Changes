@@ -1,6 +1,8 @@
 Revision history for Math-FractionalPart
 
 {{$NEXT}}
+
+0.0.2  2021-03-16T10:23:22-05:00
     - Add operations on complex numbers
     - Add tests for comple number operations
     - Reformat and improve documentation

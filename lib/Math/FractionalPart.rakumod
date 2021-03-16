@@ -1,4 +1,4 @@
-unit class Math::FractionalPart:ver<0.0.1>:auth<cpan:TBROWDER>;
+unit class Math::FractionalPart:ver<0.0.2>:auth<cpan:TBROWDER>;
 
 method frac($x) {
     self.frac
