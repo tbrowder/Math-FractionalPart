@@ -44,9 +44,9 @@ Notes
 References
 ==========
 
-1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
+1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part).
 
-2. Wolfram article on [Fractional Part](https://mathworld.wolfram.com/FractionalPart.html)
+2. Wolfram article on [Fractional Part](https://mathworld.wolfram.com/FractionalPart.html).
 
 3. *Celestial Calculations: A Gentle Introduction to Computational Astronomy*, J. L. Lawrence, 2018, MIT Press.
 
