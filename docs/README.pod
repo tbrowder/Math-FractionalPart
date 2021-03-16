@@ -44,9 +44,9 @@ ofrac | x - floor(abs(x)) * sign(x) | ofrac(-1.3): -0.3 | 3
 
 =head1 References
 
-1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>
+1. Wikipedia article on L<Fractional Part|https://en.m.wikipedia.org/wiki/Fractional_part>.
 
-2. Wolfram article on L<Fractional Part|https://mathworld.wolfram.com/FractionalPart.html>
+2. Wolfram article on L<Fractional Part|https://mathworld.wolfram.com/FractionalPart.html>.
 
 3. I<Celestial Calculations: A Gentle Introduction to Computational Astronomy>, J. L. Lawrence, 2018, MIT Press.
 
