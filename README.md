@@ -43,15 +43,19 @@ The following table shows the routines that have been implemented in this module
 </tbody>
 </table>
 
-Notes 1. See Ref. 1, *frac* version 1 (per Graham, Knuth, et alii, 1992).
-=========================================================================
+Notes
+=====
+
+1. See Ref. 1, *frac* version 1 (per Graham, Knuth, et alii, 1992).
 
 2. See Ref. 1, *frac* version 2 (per Dainith, 2004); Ref. 3, p. 7. Consider mnemonic 'a' for 'absolute value' or 'astronomical'.
 
 3. See Ref. 1, *frac* version 3 (an *odd function*); Ref. 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
 
-REFERENCES 1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
-=====================================================================================================
+REFERENCES
+==========
+
+1. Wikipedia article on [Fractional Part](https://en.m.wikipedia.org/wiki/Fractional_part)
 
 2. Wolfram article on [Fractional Part](https://mathworld.wolfram.com/FractionalPart.html)
 
