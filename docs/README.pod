@@ -18,10 +18,9 @@ say (frac -3.2);  # Output <<-0.2>>
 There are three different algebraic functions that operate on numbers
 and return their fractional parts. They all return the same result
 when operating on non-negative numbers, but all three return different
-results when operating on negative numbers. See the L<References|#References> for
-more details.
-
-Note that Ref. 3 shows I<frac> operating in the I<complex plane> as C<frac(x + i y) = frac(x) + i frac(y)>.
+results when operating on negative numbers. See the L<References|#References> 
+for more details.  Note that Ref. 2 shows I<frac> operating in the 
+I<complex plane> as C<frac(x + i y) = frac(x) + i frac(y)>.
 
 The following table shows the routines that have been implemented in
 this module.
