@@ -1,7 +1,7 @@
 use v6;
 use Test;
 
-use Math::FractionalPart;
+use Math::FractionalPart :ALL;
 
 # L<S32::Numeric/Real/"=item frac">
 

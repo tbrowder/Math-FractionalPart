@@ -1,6 +1,7 @@
 Revision history for Math-FractionalPart
 
 {{$NEXT}}
+    - Add export tags to the multi subs
 
 0.0.2  2021-03-16T10:23:22-05:00
     - Add operations on complex numbers
