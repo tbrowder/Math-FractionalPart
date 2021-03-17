@@ -1,9 +1,9 @@
 [![Actions Status](https://github.com/tbrowder/Math-FractionalPart/workflows/test/badge.svg)](https://github.com/tbrowder/Math-FractionalPart/actions)
 
-NAME
-====
+Math::FractionalPart
+====================
 
-Math::FractionalPart provides several routines to operate with the fractional parts of a number. All routines also operate on complex numbers.
+This *Raku* module provides several routines to operate with the fractional parts of a number. All routines also operate on complex numbers.
 
 SYNOPSIS
 ========
