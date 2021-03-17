@@ -1,6 +1,8 @@
 Revision history for Math-FractionalPart
 
 {{$NEXT}}
+
+0.0.3  2021-03-17T06:31:42-05:00
     - Add export tags to the multi subs
 
 0.0.2  2021-03-16T10:23:22-05:00
