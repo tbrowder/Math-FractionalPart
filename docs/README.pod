@@ -43,6 +43,8 @@ one must often compare results of operations on real numbers when being
 able to compare to the same numbers of decimal places is required.
 
 Such a function is C<frac-part-digits>, with alias names of C<decimal-places> and C<ndp>.
+The functions return the number of decimal digits to the right of the decimal point
+for a real number.
 
 =head1 Notes
 
