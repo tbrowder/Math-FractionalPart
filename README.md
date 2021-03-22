@@ -38,7 +38,7 @@ Other functions
 
 Sometimes it is useful to lnow the number of digits in the fractional part of a number. For example, in creating tests for operations on numbers, one must often compare results of operations on real numbers when being able to compare to the same numbers of decimal places is required.
 
-Such a function is `frac-part-digits`, with alias names of `decimal-places` and `ndp`.
+Such a function is `frac-part-digits`, with alias names of `decimal-places` and `ndp`. The functions return the number of decimal digits to the right of the decimal point for a real number.
 
 Notes
 =====
