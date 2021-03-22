@@ -5,7 +5,7 @@ use Math::FractionalPart :ALL;
 
 # L<S32::Numeric/Real/"=item frac">
 
-# Basic tests for the fractionl functions
+# Basic tests for the fractional functions
 
 my $debug = 0;
 my @n; # see values in BEGIN block at the end

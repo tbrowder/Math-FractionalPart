@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "blah blah blah",
+  "description": "Provides routines for operating on fractional parts of numbers",
   "license": "Artistic-2.0",
   "name": "Math::FractionalPart",
   "perl": "6.d",
@@ -18,6 +18,11 @@
   ],
   "source-url": "https://github.com/tbrowder/Math-FractionalPart.git",
   "tags": [
+    "math",
+    "frac",
+    "fraction",
+    "decimal",
+    "places"
   ],
   "test-depends": [
   ],

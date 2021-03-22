@@ -12,6 +12,28 @@ method ofrac($x) {
     self.ofrac
 }
 
+method frac-part-digits($x) {
+    self.frac-part-digits
+}
+method decimal-places($x) {
+    self.frac-part-digits
+}
+method ndp($x) {
+    self.frac-part-digits
+}
+
+multi sub frac-part-digits($x) is export(:frac-part-digits) {
+    my $f = frac $x;
+    $f == 0 ?? 0
+            !! ($f.chars-2)
+}
+multi sub decimal-places($x) is export(:decimal-places) {
+    frac-part-digits $x
+}
+multi sub ndp($x) is export(:ndp) {
+    frac-part-digits $x
+}
+
 # using notation from Wikipedia:
 multi sub frac($x) is export(:frac) {
     $x - floor($x)
