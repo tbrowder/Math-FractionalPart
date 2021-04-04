@@ -29,14 +29,14 @@ The following table shows the routines that have been implemented in this module
 <th>Name</th> <th>Raku formula</th> <th>Example</th> <th>Notes</th>
 </tr></thead>
 <tbody>
-<tr> <td>frac</td> <td>x - floor(x)</td> <td>frac(-1.3): 0.7</td> <td>1</td> </tr> <tr> <td>afrac</td> <td>abs(x) - floor(abs(x))</td> <td>afrac(-1.3): 0.3</td> <td>2</td> </tr> <tr> <td>ofrac</td> <td>x - floor(abs(x)) * sign(x)</td> <td>ofrac(-1.3): -0.3</td> <td>3</td> </tr>
+<tr> <td>frac</td> <td>x - &#x230a;x&#x230b;</td> <td>frac(-1.3): 0.7</td> <td>1</td> </tr> <tr> <td>afrac</td> <td>|x| - &#x230a;|x|&#x230b;</td> <td>afrac(-1.3): 0.3</td> <td>2</td> </tr> <tr> <td>ofrac</td> <td>x - &#x230a;|x|&#x230b;&#x22c5;sign(x)</td> <td>ofrac(-1.3): -0.3</td> <td>3</td> </tr>
 </tbody>
 </table>
 
 Other functions
 ---------------
 
-Sometimes it is useful to lnow the number of digits in the fractional part of a number. For example, in creating tests for operations on numbers, one must often compare results of operations on real numbers when being able to compare to the same numbers of decimal places is required.
+Sometimes it is useful to know the number of digits in the fractional part of a number. For example, in creating tests for operations on numbers, one must often compare results of operations on real numbers when being able to compare to the same numbers of decimal places is required.
 
 Such a function is `frac-part-digits`, with alias names of `decimal-places` and `ndp`. The functions return the number of decimal digits to the right of the decimal point for a real number.
 

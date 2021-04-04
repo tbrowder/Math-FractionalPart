@@ -30,14 +30,14 @@ this module.
 =begin table
 Name  | Raku formula                | Example           | Notes
 ---   | ---                         | ---               | ---
-frac  | x - floor(x)                | frac(-1.3): 0.7   | 1
-afrac | abs(x) - floor(abs(x))      | afrac(-1.3): 0.3  | 2
-ofrac | x - floor(abs(x)) * sign(x) | ofrac(-1.3): -0.3 | 3
+frac  | x - E<0x230a>xE<0x230b>                     | frac(-1.3): 0.7   | 1
+afrac | \|x\| - E<0x230a>\|x\|E<0x230b>             | afrac(-1.3): 0.3  | 2
+ofrac | x - E<0x230a>\|x\|E<0x230b>E<0x22c5>sign(x) | ofrac(-1.3): -0.3 | 3
 =end table
 
 =head2 Other functions
 
-Sometimes it is useful to lnow the number of digits in the fractional part
+Sometimes it is useful to know the number of digits in the fractional part
 of a number. For example, in creating tests for operations on numbers,
 one must often compare results of operations on real numbers when being
 able to compare to the same numbers of decimal places is required.
