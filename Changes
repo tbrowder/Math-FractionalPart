@@ -2,6 +2,9 @@ Revision history for Math-FractionalPart
 
 {{$NEXT}}
 
+0.0.5  2021-04-04T18:40:29-05:00
+    - Improve table with proper math symbols instead of wordsi
+
 0.0.4  2021-03-21T21:12:29-05:00
     - Add new routine 'frac-part-digits'
       and aliases 'decimal-places' and 'ndp'
