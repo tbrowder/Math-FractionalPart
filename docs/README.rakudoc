@@ -30,7 +30,7 @@ The c<modf> routine (currently not available in the I<Raku> core) is
 similar to those in other languages including I<C>, I<C++>, I<Python>,
 and I<Haskell>. It coerces its input into a base 10 number and returns
 the integral and fractional parts in a list as shown below. (Note the
-C<modf> routine hss been submitted as a PR for the Raku core and may
+C<modf> routine has been submitted as a PR for the Raku core and may
 be part of the language soon.)
 
 =begin code :lang<raku>
@@ -103,9 +103,9 @@ digits to the right of the decimal point for a real number.
 
 1. See Ref. 1, *frac* version 1 (per Graham, Knuth, et alii, 1992).
 
-2. See Ref. 1, *frac* version 2 (per Dainith, 2004); Ref. 3, p. 7. Consider mnemonic 'a' for 'absolute value' or 'astronomical'.
+2. See Ref. 2, *frac* version 2 (per Dainith, 2004); Ref. 3, p. 7. Consider mnemonic 'a' for 'absolute value' or 'astronomical'.
 
-3. See Ref. 1, *frac* version 3 (an *odd function*); Ref. 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
+3. See Ref. 3, *frac* version 3 (an *odd function*); Ref. 2: Wolfram's *FractionPart* function. Consider mnemonic 'o' for 'odd function'.
 
 =head1 References
 
