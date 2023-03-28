@@ -1,4 +1,4 @@
-unit module Math::FractionalPart:ver<0.0.5>:auth<cpan:TBROWDER>;
+unit module Math::FractionalPart:ver<0.0.6>:auth<cpan:TBROWDER>;
 
 class Math::FractionalPart is Num is export {
 

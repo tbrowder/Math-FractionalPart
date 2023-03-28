@@ -1,6 +1,8 @@
 Revision history for Math-FractionalPart
 
 {{$NEXT}}
+
+0.0.6  2023-03-28T14:56:09-05:00
     - Move to Zef Raku module repo
     - Rakuize file suffixes
     - Provide separate workflow tests for each OS
