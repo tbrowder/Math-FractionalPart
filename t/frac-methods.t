@@ -1,4 +1,3 @@
-use v6;
 use Test;
 
 use Math::FractionalPart :ALL;
@@ -10,9 +9,9 @@ use Math::FractionalPart :ALL;
 my $debug = 0;
 my @n; # see values in BEGIN block at the end
 # the three functions to be tested:
-my @f = &frac, &afrac, &ofrac;
+my @f = &frac, &afrac, &ofrac, &fractional, &fractional-abs, &fractional-wolfram;
 
-plan 555;
+plan 1110;
 
 for @f {
     my $fn = $_.name;
@@ -26,10 +25,13 @@ for @f {
 for @n -> $tgt is copy {
     # complex version
     my Complex $c = Complex.new($tgt.Real, $tgt.Real);
+
+    # check the negative values
+
     for @f {
         my $fn = $_.name;
         my $exp;
-        when $fn eq 'frac' {
+        when ($fn eq 'frac') or ($fn eq 'fractional') {
             note "DEBUG: fn = '$fn'" if $debug;
             $exp = ($tgt - $tgt.floor);
             is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
@@ -49,7 +51,7 @@ for @n -> $tgt is copy {
             isa-ok ($_ $tgt), Real, "($fn $tgt), Real for function $fn";
             =end comment
         }
-        when $fn eq 'afrac' {
+        when ($fn eq 'afrac') or ($fn eq 'fractional-abs') {
             note "DEBUG: fn = '$fn'" if $debug;
             $exp = ($tgt.abs - $tgt.abs.floor);
             is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
@@ -63,7 +65,7 @@ for @n -> $tgt is copy {
             is-approx $cc.im, $exp, "is f($tgt).im = $exp for function $fn on Complex number";
             isa-ok $cc, Complex, "isa-ok f($tgt), Complex for function $fn";
         }
-        when $fn eq 'ofrac' {
+        when ($fn eq 'ofrac') or ($fn eq 'fractional-wolfram') {
             note "DEBUG: fn = '$fn'" if $debug;
             $exp = ($tgt - $tgt.abs.floor * $tgt.sign);
             is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
@@ -87,7 +89,7 @@ for @n -> $tgt is copy {
     for @f {
         my $fn = $_.name;
         my $exp;
-        when $fn eq 'frac' {
+        when ($fn eq 'frac') or ($fn eq 'fractional') {
             note "DEBUG: fn = '$fn'" if $debug;
             $exp = ($tgt - $tgt.floor);
             is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
@@ -101,7 +103,7 @@ for @n -> $tgt is copy {
             is-approx $cc.im, $exp, "is f($tgt).im = $exp for function $fn on Complex number";
             isa-ok $cc, Complex, "isa-ok f($tgt), Complex for function $fn";
         }
-        when $fn eq 'afrac' {
+        when ($fn eq 'afrac') or ($fn eq 'fractional-abs') {
             note "DEBUG: fn = '$fn'" if $debug;
             $exp = ($tgt.abs - $tgt.abs.floor);
             is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
@@ -115,7 +117,7 @@ for @n -> $tgt is copy {
             is-approx $cc.im, $exp, "is f($tgt).im = $exp for function $fn on Complex number";
             isa-ok $cc, Complex, "isa-ok f($tgt), Complex for function $fn";
         }
-        when $fn eq 'ofrac' {
+        when ($fn eq 'ofrac') or ($fn eq 'fractional-wolfram') {
             note "DEBUG: fn = '$fn'" if $debug;
             $exp = ($tgt - $tgt.abs.floor * $tgt.sign);
             is $_($tgt), $exp, "is f($tgt) = $exp for function $fn";
@@ -152,5 +154,3 @@ BEGIN {
     ;
 }
 
-
-# vim: expandtab shiftwidth=4

@@ -1,6 +1,8 @@
 Revision history for Math-FractionalPart
 
 {{$NEXT}}
+    - Move to Zef Raku module repo
+    - Rakuize file suffixes
 
 0.0.5  2021-04-04T18:40:29-05:00
     - Improve table with proper math symbols instead of wordsi
