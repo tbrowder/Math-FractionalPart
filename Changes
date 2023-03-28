@@ -3,9 +3,10 @@ Revision history for Math-FractionalPart
 {{$NEXT}}
     - Move to Zef Raku module repo
     - Rakuize file suffixes
+    - Provide separate workflow tests for each OS
 
 0.0.5  2021-04-04T18:40:29-05:00
-    - Improve table with proper math symbols instead of wordsi
+    - Improve table with proper math symbols instead of words
 
 0.0.4  2021-03-21T21:12:29-05:00
     - Add new routine 'frac-part-digits'
